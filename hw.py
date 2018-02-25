@@ -26,3 +26,6 @@ def countYearsReducer():
 #print(df['birth_year'])
 result = functools.reduce(countYearsReducer(), df['birth_year'])
 print(result)
+print('===============================')
+result = functools.reduce(countYearsReducer(), df['birth_year'])
+print(result)
