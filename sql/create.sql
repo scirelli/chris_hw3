@@ -33,3 +33,15 @@ CREATE TABLE `Trip` (
       CONSTRAINT `end_station_id` FOREIGN KEY (`end_station`) REFERENCES `station` (`station_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
       CONSTRAINT `start_station_id` FOREIGN KEY (`start_station`) REFERENCES `station` (`station_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- For data cleaning --
+CREATE TABLE `cleaned_station` (
+  `station_id` int(11) NOT NULL,
+  `name` varchar(90) NOT NULL,
+  `latitude` decimal(20,10) DEFAULT '0.0000000000',
+  `longitude` decimal(20,10) DEFAULT '0.0000000000',
+  `cleaned_station_id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`cleaned_station_id`),
+  UNIQUE KEY `station_id_UNIQUE` (`station_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
