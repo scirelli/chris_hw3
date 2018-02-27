@@ -1,13 +1,14 @@
 -- CREATE DATABASE `chris_citibike` /*!40100 DEFAULT CHARACTER SET latin1 */;
 use chris_citibike;
 
-CREATE TABLE `bike` (
-      `bikeid` int(11) NOT NULL,
-      `usertype` varchar(45) DEFAULT NULL,
-      `birth_year` year(4) NOT NULL,
-      `gender` binary(2) NOT NULL,
-      PRIMARY KEY (`bikeid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `user` (
+  `bikeid` int(11) NOT NULL,
+  `usertype` varchar(45) DEFAULT NULL,
+  `birth_year` year(4) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=46201 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `station` (
       `station_id` int(11) NOT NULL,
