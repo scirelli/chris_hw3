@@ -45,3 +45,23 @@ CREATE TABLE `cleaned_station` (
   PRIMARY KEY (`cleaned_station_id`),
   UNIQUE KEY `station_id_UNIQUE` (`station_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `raw_data` (
+  `cartodb_id` int(11) NOT NULL,
+  `the_geom` varchar(45) DEFAULT NULL,
+  `tripduration` int(11) DEFAULT NULL,
+  `starttime` datetime DEFAULT NULL,
+  `stoptime` datetime DEFAULT NULL,
+  `start_station_id` int(11) NOT NULL,
+  `start_station_name` varchar(45) DEFAULT NULL,
+  `start_station_latitude` decimal(20,10) DEFAULT NULL,
+  `start_station_longitude` decimal(20,10) DEFAULT NULL,
+  `end_station_id` int(11) DEFAULT NULL,
+  `end_station_name` varchar(45) DEFAULT NULL,
+  `end_station_latitude` decimal(20,10) DEFAULT NULL,
+  `end_station_longitude` decimal(20,10) DEFAULT NULL,
+  `bikeid` int(11) NOT NULL,
+  `usertype` varchar(45) DEFAULT NULL,
+  `birth_year` year(4) DEFAULT NULL,
+  `gender` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
